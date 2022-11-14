@@ -14,18 +14,20 @@ class Task {
   final List<Tag> tags;
   final DateTime? dueDate;
   final bool complete;
+  bool isSelected;
 
-  const Task({
+  Task({
     required this.uuid,
     required this.title,
     required this.tags,
     required this.complete,
     this.dueDate,
+    required this.isSelected,
   });
 
   @override
   String toString() {
-    return 'Task(uuid: $uuid, title: $title, tags: $tags, dueDate: $dueDate, complete: $complete)';
+    return 'Task(uuid: $uuid, title: $title, tags: $tags, dueDate: $dueDate, complete: $complete, isSelected: $isSelected)';
   }
 
   @override
@@ -43,9 +45,9 @@ class Task {
   @override
   int get hashCode {
     return uuid.hashCode ^
-        title.hashCode ^
-        const ListEquality().hash(tags) ^
-        dueDate.hashCode ^
-        complete.hashCode;
+    title.hashCode ^
+    const ListEquality().hash(tags) ^
+    dueDate.hashCode ^
+    complete.hashCode;
   }
 }

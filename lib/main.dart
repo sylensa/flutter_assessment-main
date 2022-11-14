@@ -30,6 +30,7 @@ class TasksApp extends StatelessWidget {
 //
 // Use this fake, mock, or "sample" data throughout the app to complete the
 // assessment
+const tag0 = Tag(uuid: 'tag-0', title: 'No Tag');
 const tag1 = Tag(uuid: 'tag-1', title: 'Sample Tag');
 const tag2 = Tag(uuid: 'tag-2', title: 'Another Sample Tag');
 final yesterday = DateTime.now().subtract(const Duration(hours: 24)).toUtc();
@@ -42,25 +43,28 @@ final tasks = [
     title: 'Travel Checklist',
     tasks: [
       Task(
-        uuid: 'task-1',
-        title: 'Suitcase',
-        tags: [tag1, tag2],
-        complete: false,
-        dueDate: today,
+          uuid: 'task-1',
+          title: 'Suitcase',
+          tags: [tag1, tag2],
+          complete: false,
+          dueDate: today,
+          isSelected: false
       ),
       Task(
-        uuid: 'task-2',
-        title: 'Shirts',
-        tags: [tag2],
-        complete: true,
-        dueDate: today,
+          uuid: 'task-2',
+          title: 'Shirts',
+          tags: [tag2],
+          complete: true,
+          dueDate: today,
+          isSelected: false
       ),
       Task(
-        uuid: 'task-3',
-        title: 'Sunglasses',
-        tags: [],
-        complete: false,
-        dueDate: tomorrow,
+          uuid: 'task-3',
+          title: 'Sunglasses',
+          tags: [],
+          complete: false,
+          dueDate: tomorrow,
+          isSelected: false
       ),
     ],
   ),
@@ -69,24 +73,27 @@ final tasks = [
     title: 'Shopping List',
     tasks: [
       Task(
-        uuid: 'task-4',
-        title: 'Carrots',
-        tags: [tag2],
-        complete: true,
-        dueDate: today,
+          uuid: 'task-4',
+          title: 'Carrots',
+          tags: [tag2],
+          complete: true,
+          dueDate: today,
+          isSelected: false
       ),
       Task(
-        uuid: 'task-5',
-        title: 'Celery',
-        tags: [],
-        complete: true,
-        dueDate: yesterday,
+          uuid: 'task-5',
+          title: 'Celery',
+          tags: [],
+          complete: true,
+          dueDate: yesterday,
+          isSelected: false
       ),
-      const Task(
-        uuid: 'task-6',
-        title: 'Apple Sauce',
-        tags: [tag2],
-        complete: false,
+      Task(
+          uuid: 'task-6',
+          title: 'Apple Sauce',
+          tags: [tag2],
+          complete: false,
+          isSelected: false
       ),
     ],
   ),
@@ -95,25 +102,28 @@ final tasks = [
     title: 'Hiking Checklist',
     tasks: [
       Task(
-        uuid: 'task-7',
-        title: 'Sunscreen',
-        tags: [tag2],
-        complete: true,
-        dueDate: later,
+          uuid: 'task-7',
+          title: 'Sunscreen',
+          tags: [tag2],
+          complete: true,
+          dueDate: later,
+          isSelected: false
       ),
       Task(
-        uuid: 'task-8',
-        title: 'Hiking Shoes',
-        tags: [tag1],
-        complete: true,
-        dueDate: later,
+          uuid: 'task-8',
+          title: 'Hiking Shoes',
+          tags: [tag1],
+          complete: true,
+          dueDate: later,
+          isSelected: false
       ),
       Task(
-        uuid: 'task-9',
-        title: 'First Aid Kit',
-        tags: [tag1],
-        complete: false,
-        dueDate: tomorrow,
+          uuid: 'task-9',
+          title: 'First Aid Kit',
+          tags: [tag1],
+          complete: false,
+          dueDate: tomorrow,
+          isSelected: false
       ),
     ],
   ),
